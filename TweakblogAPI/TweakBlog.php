@@ -10,6 +10,8 @@ namespace TweakblogAPI;
 
 use DOMDocument;
 use DOMXPath;
+use SimpleXMLElement;
+use Exception;
 
 class TweakBlog
 {
@@ -249,7 +251,8 @@ class TweakBlog
 		}
 
 		$url = "http://" . $url . ".tweakblogs.net/feed/";
-		$xml = simplexml_load_file($url);
+
+		$xml = new SimpleXMLElement($url, 0, true);
 		$xml->addAttribute("encoding", "UTF-8");
 
 		$results = array();

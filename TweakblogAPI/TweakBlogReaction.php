@@ -8,6 +8,8 @@
 
 namespace TweakblogAPI;
 
+use Exception;
+
 class TweakBlogReaction
 {
 	/**

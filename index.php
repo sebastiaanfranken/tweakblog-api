@@ -21,8 +21,6 @@ try
 	{
 		print '<li><a href="' . $blog->getUrl() . '">' . $blog->getTitle() . '</a></li>';
 	}
-
-	print "<pre>" . print_r($tb, true) . "</pre>";
 }
 catch(Exception $e)
 {
