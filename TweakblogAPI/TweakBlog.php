@@ -8,6 +8,9 @@
 
 namespace TweakblogAPI;
 
+use DOMDocument;
+use DOMXPath;
+
 class TweakBlog
 {
 
