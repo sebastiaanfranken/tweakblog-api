@@ -46,6 +46,11 @@ class TweakBlog
 		$this->description = "--";
 	}
 
+	public function __toString()
+	{
+		return $this->title;
+	}
+
 	/**
 	 * The general system setter
 	 * @author Sebastiaan Franken
@@ -139,6 +144,30 @@ class TweakBlog
 	public function getDescription()
 	{
 		return $this->get("description");
+	}
+
+	/**
+	 * A setter for the URL
+	 * @author Sebastiaan Franken
+	 * @access public
+	 * @param string $url The URL to set
+	 * @return TweakblogAPI\TweakBlog
+	 */
+	public function setUrl($url)
+	{
+		$this->set("url", $url);
+		return $this;
+	}
+
+	/**
+	 * A getter for the URL
+	 * @author Sebastiaan Franken
+	 * @access public
+	 * @return string
+	 */
+	public function getUrl()
+	{
+		return $this->get("url");
 	}
 
 	/**
